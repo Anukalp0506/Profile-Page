@@ -11,7 +11,7 @@
     <meta property="og:title" content="anukalp" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="too lazy to edit this" />
-    <meta property="og:image" content="https://anukalp.ju.mp/assets/images/card.jpg?v=cf165058" />
+    <meta property="og:image" content="https://anukalp.ju.mp/assets/images/card.jpg?v=7c96e9f0" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
@@ -200,7 +200,7 @@
             transform: scale(1);
             width: 100vw;
             z-index: 0;
-            background-image: linear-gradient(180deg, #262829 0%, #1B1C1C 100%);
+            background-image: linear-gradient(180deg, #3B4042 20%, #1B1C1C 71%);
             background-position: 0% 0%;
             background-repeat: repeat;
             background-size: auto;
@@ -308,6 +308,10 @@
 
         a[onclick]:not([href]) {
             cursor: pointer;
+        }
+
+        deferred-script {
+            display: none;
         }
 
         #wrapper {
@@ -855,14 +859,6 @@
             margin-top: 1rem;
         }
 
-        h1.style6>*,
-        h2.style6>*,
-        h3.style6>*,
-        p.style6>* {
-            display: inline-block;
-            line-height: 1.2;
-        }
-
         h1.style5,
         h2.style5,
         h3.style5,
@@ -1104,19 +1100,19 @@
                 <div id="container03" class="style2 container default">
                     <div class="wrapper">
                         <div class="inner" data-onvisible-trigger="1">
-                            <div id="image01" class="style1 image"><span class="frame"><img src="assets/images/image01.jpg?v=cf165058" alt="" /></span></div>
+                            <div id="image01" class="style1 image"><span class="frame"><img src="assets/images/image01.jpg?v=7c96e9f0" alt="" /></span></div>
                             <h1 id="text15" class="style6">Hi, I&#39;m Anukalp</h1>
-                            <p id="text06" class="style5"><span class="p">I’m interested in programming and smaller utilities.<br /> I’m currently learning various languages and finding my way into the world of coding.</span></p>
+                            <p id="text06" class="style5"><span class="p">Iâ€™m interested in programming and smaller utilities.<br /> Iâ€™m currently learning various languages and finding my way into the world of coding.</span></p>
                         </div>
                     </div>
                 </div>
                 <ul id="icons05" class="style2 icons">
                     <li><a class="n01" href="https://www.instagram.com/darkflamee._?igsh=OGQ5ZDc2ODk2ZA==" aria-label="Instagram"><svg><use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use></svg><span class="label">Instagram</span></a></li>
                     <li><a class="n02" href="https://discord.gg/yhvXA3eYUH" aria-label="Discord"><svg><use xlink:href="#icon-3b7eeeccbb457780f277fce4669f67a0"></use></svg><span class="label">Discord</span></a></li>
-                    <li><a class="n03" href="/cdn-cgi/l/email-protection#5e3f302b353f322e393f333730391e39333f3732703d3133" aria-label="Email"><svg><use xlink:href="#icon-c0646d28bbeb18e39eb973f96b44bd0f"></use></svg><span class="label">Email</span></a></li>
-                    <li><a class="n04" href="https://github.com/Anukalp0506" aria-label="GitHub"><svg><use xlink:href="#icon-8c4b37645de3c276d895d87df51ba614"></use></svg><span class="label">GitHub</span></a></li>
+                    <li><a class="n03" href="/cdn-cgi/l/email-protection#20414e554b414c5047414d494e4760474d41494c0e434f4d" aria-label="Email"><svg><use xlink:href="#icon-c0646d28bbeb18e39eb973f96b44bd0f"></use></svg><span class="label">Email</span></a></li>
+                    <li><a class="n04" href="https://github.com/idk196323" aria-label="GitHub"><svg><use xlink:href="#icon-8c4b37645de3c276d895d87df51ba614"></use></svg><span class="label">GitHub</span></a></li>
                 </ul>
-                <p id="text02" class="style5">© Copyright. All right reserved.</p>
+                <p id="text02" class="style5">Â© Copyright. All right reserved.</p>
             </div>
         </div>
         </div>
@@ -1309,6 +1305,14 @@
                                 break;
                             default:
                                 break;
+                        }
+                        a = parent.querySelectorAll('deferred-script');
+                        for (i = 0; i < a.length; i++) {
+                            x = document.createElement('script');
+                            x.setAttribute('data-deferred', '');
+                            if (a[i].getAttribute('src')) x.setAttribute('src', a[i].getAttribute('src'));
+                            if (a[i].textContent) x.textContent = a[i].textContent;
+                            a[i].replaceWith(x);
                         }
                     },
                     unloadElements = function(parent) {
@@ -1929,7 +1933,7 @@
                     speed: 1500,
                     intensity: 0,
                     threshold: 3,
-                    delay: 1000,
+                    delay: 1125,
                     replay: false
                 });
                 onvisible.add('.image.style1', {
@@ -1937,17 +1941,15 @@
                     speed: 1500,
                     intensity: 0,
                     threshold: 3,
-                    delay: 0,
+                    delay: 375,
                     replay: false
                 });
                 onvisible.add('h1.style6, h2.style6, h3.style6, p.style6', {
                     style: 'slide-right',
-                    speed: 1250,
+                    speed: 1500,
                     intensity: 3,
                     threshold: 3,
-                    delay: 125,
-                    stagger: 125,
-                    staggerSelector: ':scope > *',
+                    delay: 875,
                     replay: false
                 });
                 onvisible.add('h1.style5, h2.style5, h3.style5, p.style5', {
@@ -1955,7 +1957,7 @@
                     speed: 1500,
                     intensity: 2,
                     threshold: 3,
-                    delay: 500,
+                    delay: 1000,
                     replay: false
                 });
             })();
